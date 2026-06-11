@@ -44,6 +44,9 @@ const sidebars: SidebarsConfig = {
         { type: 'doc', id: 'use-cases/interactive' },
         { type: 'doc', id: 'use-cases/dsl' },
         { type: 'doc', id: 'use-cases/big-ml' },
+        { type: 'doc', id: 'use-cases/financial-services' },
+        { type: 'doc', id: 'use-cases/ml-ai-pipelines' },
+        { type: 'doc', id: 'use-cases/microservices-orchestration' },
       ],
     },
 
