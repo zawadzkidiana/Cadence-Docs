@@ -17,7 +17,7 @@ import { envReplace } from '@pnpm/config.env-replace';
 const defaultLocale = 'en';
 
 const config: Config = {
-  title: 'Cadence',
+  title: 'Cadence Workflow',
   tagline: 'Orchestrate with Confidence: The Open-Source Workflow Engine for Tomorrow',
   favicon: 'img/favicon.ico',
   markdown: {
