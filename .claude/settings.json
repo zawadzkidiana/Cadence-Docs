@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Bash(npm run build)",
+      "Bash(npm run start)",
+      "Bash(npm start)",
+      "Bash(npm run serve)",
+      "Bash(npm ci)",
+      "Bash(npm run typecheck)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(grep:*)",
+      "Bash(gh pr:*)"
+    ],
+    "ask": [
+      "Bash(git push:*)",
+      "Bash(npm run deploy)",
+      "Bash(npm run swizzle:*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./.envrc)",
+      "Bash(rm -rf:*)"
+    ]
+  }
+}
