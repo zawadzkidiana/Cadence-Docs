@@ -88,14 +88,14 @@ Reinstalling the chart against retained PVCs (or the same external store) with t
 
 Stopping Cadence never drops its schema. Schema setup Jobs and the `cadence-cassandra-tool` / `cadence-sql-tool` utilities create and migrate keyspaces or databases. They do not run a teardown on uninstall.
 
-Default names from the Helm chart values (override as configured):
+Default names from the Helm chart [`values.yaml`](https://github.com/cadence-workflow/cadence-charts/blob/main/charts/cadence/values.yaml) (override as configured):
 
-| Store | Default name |
-| --- | --- |
-| Cassandra main keyspace | `cadence` |
-| Cassandra visibility keyspace | `cadence_visibility` |
-| MySQL / PostgreSQL main database | `cadence` |
-| MySQL / PostgreSQL visibility database | `cadence_visibility` |
+| Store | Chart key | Default name |
+| --- | --- | --- |
+| Cassandra main keyspace | `config.persistence.database.cassandra.keyspace` | `cadence` |
+| Cassandra visibility keyspace | `config.persistence.database.cassandra.visibilityKeyspace` | `cadence_visibility` |
+| MySQL / PostgreSQL main database | `config.persistence.database.sql.dbname` | `cadence` |
+| MySQL / PostgreSQL visibility database | `config.persistence.database.sql.visibilityDbname` | `cadence_visibility` |
 
 To destroy persistence data you must use the datastore itself (for example `DROP KEYSPACE`, `DROP DATABASE`, restore an empty volume, or delete the cloud database instance). Cadence provides no automated "uninstall schema" Job. Treat schema deletion as data destruction, not as disablement.
 
